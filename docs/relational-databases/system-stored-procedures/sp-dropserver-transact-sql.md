@@ -48,6 +48,8 @@ sp_dropserver [ @server = ] 'server'
  If you run **sp_dropserver** on a server that has associated remote and linked server login entries, or is configured as a replication publisher, an error message is returned. To remove all remote and linked server logins for a server when you remove the server, use the **droplogins** argument.  
   
  **sp_dropserver** cannot be executed inside a user-defined transaction.  
+ 
+ Using **sp_addserver** to change the local server name may cause undesired effects or unsupported configurations such as when using Availbility Groups or Replication.
   
 ## Permissions  
  Requires ALTER ANY LINKED SERVER permission on the server.  
